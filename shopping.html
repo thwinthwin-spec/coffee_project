@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping Cart - Bean Boutique</title>
+  <link rel="stylesheet" href="style.css" /> 
+</head>
+
+<body>
+  <header>
+    <h1>Shopping Cart</h1>
+  </header>
+
+  <div class="nemubar">
+    <a href="home.html" class="nemubar1">Home</a>
+    <a href="coffee selection.html" class="nemubar1">Selection</a>
+    <a href="machine.html" class="nemubar1">Equipment</a>
+    <a href="event.html" class="nemubar1">Events</a>
+    <a href="promotion.html" class="nemubar1">Offers</a>
+  </div>
+
+  <section class="cart">
+    <h2>Your Basket</h2>
+    <table id="cartTable">
+      <tr>
+        <th>Product</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Total</th>
+        <th>Action</th>
+      </tr>
+    </table>
+    <button class="checkout-btn" onclick="checkout()">Checkout</button>
+  </section>
+
+  
+  <script>
+    function loadCart() {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let table = document.getElementById("cartTable");
+      let totalAmount = 0;
+
+      cart.forEach((item, index) => {
+        let row = document.createElement("tr");
+        let total = item.price * item.qty;
+        totalAmount += total;
+
+        row.innerHTML = `
+          <td>${item.product}</td>
+          <td>${item.qty}</td>
+          <td>${item.price} $</td>
+          <td>${total} $</td>
+          <td><button onclick="removeItem(${index})">Remove</button></td>
+        `;
+        table.appendChild(row);
+      });
+
+      if (cart.length > 0) {
+        let totalRow = document.createElement("tr");
+        totalRow.innerHTML = `
+          <td colspan="3" style="text-align:right;"><b>Grand Total</b></td>
+          <td><b>${totalAmount} $</b></td>
+          <td></td>
+        `;
+        table.appendChild(totalRow);
+      }
+    }
+
+    function removeItem(index) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      location.reload();
+    }
+
+    function checkout() {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      if (cart.length === 0) {
+        alert("Your cart is already empty!");
+        return;
+      }
+
+      alert("✅ Thank you for your purchase!");
+      localStorage.removeItem("cart");
+      location.reload();
+    }
+
+    window.onload = loadCart;
+  </script>
+</body>
+</html>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body onload="securityCheck();">
+
+
+  <div id="SecurithCheckContainer">
+    <div id="securityCheck">
+      <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+      <button onclick="securityBtn();">OK</button>
+    </div>
+  </div>
+
+  <section class="brewing-equipment">
+    <h2>Our Brewing Equipment</h2>
+    <div class="nemu">
+      <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="coffee.html">Coffee</a>
+        <a href="machine.html">Equipment</a>
+        <a href="shopping.html">Cart</a>
+        <a href="promotion.html">Offers</a>
+      </nav>
+    </div>
+    <div class="equipment-grid">
+      <div class="equipment-card">
+        <img src=" image/coffee12.jpg" class="coffeeimage" alt="">
+        <h3>Espresso Coffee</h3>
+        <h4>Price : $6</h4>
+        <p>Delivers rich and creamy espresso shots for lattes, cappuccinos, and more.</p>
+        <button class="btn" onclick="addToCart('Espresso Coffee', 6)">Buy Now</button>
+      </div>
+      <div class="equipment-card">
+        <img src="image/coffee1.jpg" class="coffeeimage1" alt="">
+        <h3>Americano Coffee</h3>
+        <h4>price : $6</h4>
+        <p>An Americano is a coffee drink made with espresso and hot water.</p>
+        <button class="btn" onclick="addToCart('Americano Coffee', 6)">Buy Now</button>
+      </div>
+      <div class="equipment-card">
+        <img src="image/coffee2.jpg" class="coffeeimage2" alt="">
+        <h3>latte Coffee</h3>
+        <h4>price : $6</h4>
+        <p>A latte is an espresso-based coffee drink that combines espresso with steamed milk.</p>
+        <button class="btn" onclick="addToCart('latte Coffee', 6)">Buy Now</button>
+      </div>
+      <div class="equipment-card">
+        <img src="image/coffee3.jpg" class="coffeeimage3" alt="">
+        <h3>Cappuccino Coffee</h3>
+        <h4>price : $6</h4>
+        <p>A cappuccino is a coffee drink made with espresso, steamed milk, and milk foam</p>
+        <button class="btn" onclick="addToCart('Cappuccino Coffee', 6)">Buy Now</button>
+      </div>
+      <div class="equipment-card">
+        <img src="image/coffee4.jpg" class="coffeeimage4" alt="">
+        <h3>Mocha Coffee</h3>
+        <h4>Price : $6</h4>
+        <p>Delivers rich and creamy espresso shots for lattes, cappuccinos, and more.</p>
+        <button class="btn" onclick="addToCart('Mocha Coffee', 6)">Buy Now</button>
+      </div>
+      <div class="equipment-card">
+        <img src="image/coffee5.jpg" class="coffeeimage5" alt="">
+        <h3>Flat white Coffee</h3>
+        <h4>price : $6</h4>
+        <p>Cold brew coffee is made by steeping coarse-ground coffee beans in cold water.</p>
+        <button class="btn" onclick="addToCart('Flat White Coffee', 6)">Buy Now</button>
+      </div>
+      <div class="equipment-card">
+        <img src="image/.jpg" class="coffeeimage6" alt="">
+        <h3>lattes Coffee</h3>
+        <h4>price : $6</h4>
+        <p>Scoop one or two scoops of vanilla ice cream into a glass or bowl. </p>
+        <button class="btn" onclick="addToCart('lattes Coffee', 6)">Buy Now</button>
+      </div>
+      <div class="equipment-card">
+        <img src="image/coffee7.jpg" class="coffeeimage7" alt="">
+        <h3>Turkish Coffee</h3>
+        <h4>price : $6</h4>
+        <p>Turkish coffee is a method of preparing unfiltered coffee using very finely.</p>
+        <button class="btn" onclick="addToCart('Turkish Coffee', 6)">Buy Now</button>
+      </div>
+      <div class="equipment-card">
+        <img src="image/coffee8.jpg" class="coffeeimage8" alt="">
+        <h3>Ristretto Coffee</h3>
+        <h4>Price : $6</h4>
+        <p>Delivers rich and creamy espresso shots for lattes, cappuccinos, and more.</p>
+        <button class="btn" onclick="addToCart('Ristretto Coffee', 6)">Buy Now</button>
+      </div>
+      <div class="equipment-card">
+        <img src="image/coffee9.jpg" class="coffeeimage9" alt="">
+        <h3>Drip Coffee</h3>
+        <h4>price : $6</h4>
+        <p>Cold brew coffee is made by steeping coarse-ground coffee beans in cold water </p>
+        <button class="btn" onclick="addToCart('Drip Coffee', 6)">Buy Now</button>
+      </div>
+      <div class="equipment-card">
+        <img src="image/coffee10.jpg" class="coffeeimage10" alt="">
+        <h3>Can Coffee</h3>
+        <h4>price : $6</h4>
+        <p>Scoop one or two scoops of vanilla ice cream into a glass or bowl. Then, pour one hot ,</p>
+        <button class="btn" onclick="addToCart('Can Coffee', 6)">Buy Now</button>
+      </div>
+      <div class="equipment-card">
+        <img src="image/coffee11.jpg" class="coffeeimage11" alt="">
+        <h3>Cold Brew Coffee</h3>
+        <h4>price : $7</h4>
+        <p>Turkish coffee is a method of preparing unfiltered coffee using very finely ground beans</p>
+        <button class="btn" onclick="addToCart('Cold Brew Coffee', 7)">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-container">
+      <div class="contact">
+        <h3>Contact Us</h3>
+        <p>Email: beanboutique.com</p>
+        <p>Address: 123 Coffee Street, Yangon, Myanmar</p>
+      </div>
+      <div class="social">
+        <h3>Follow Us</h3>
+        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.tiktok.com/"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Bean Boutique Coffee Shop. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    sessionStorage.setItem("count", "1");
+
+    
+    let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+    function addToCart(product, price) {
+      let found = cartItems.find(item => item.product === product);
+      if (found) {
+        found.qty += 1;
+      } else {
+        cartItems.push({ product: product, price: price, qty: 1 });
+      }
+      localStorage.setItem("cart", JSON.stringify(cartItems));
+      Swal.fire(
+        {
+          icon: 'success',
+          title: 'Add To Cart',
+          html: `<p> Has been added to your cart. <p>`,
+        }
+      )
+
+    }
+
+    let securityCheck = () => {
+      let security = sessionStorage.getItem("count");
+      if (security) {
+        document.getElementById("SecurithCheckContainer").style.display = "flex";
+      } else {
+        document.getElementById("SecurithCheckContainer").style.display = "none";
+      }
+    };
+
+    let securityBtn = () => {
+      sessionStorage.removeItem("count");
+      document.getElementById("SecurithCheckContainer").style.display = "none";
+    };
+  </script>
+
+</body>
+
+</html>
