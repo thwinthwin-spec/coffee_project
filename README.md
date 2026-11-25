@@ -2,18 +2,18 @@
 
 A static, multi-page coffee shop website showcasing drinks, brewing equipment, events, promotions, and a browser-based shopping cart.
 
-## အကျဉ်း — ဒီ project က ဘာလဲ? (At a glance)
+## At a glance — what is this project?
 
 | | |
 | --- | --- |
 | **Project** | Bean Boutique Coffee Shop |
-| **အမျိုးအစား** | Static front-end demo website — ကော်ဖီဆိုင်အတွက် စာမျက်နှာ ၆ ခု |
-| **ဘာလုပ်ပေးလဲ** | Drinks / machines catalog, event, promotion, image slideshow, newsletter popup, `localStorage` demo cart, form တွေက browser ထဲမှာပဲ အတည်ပြုချက် ပြပါတယ် |
-| **Tech** | HTML5, CSS3, vanilla JavaScript (inline) · Font Awesome · SweetAlert2 — backend/DB မရှိပါ |
-| **Ports** | Install/build မလိုပါ — `home.html` ကို တိုက်ရိုက်ဖွင့်လို့ရပါတယ်။ လိုရင် `python -m http.server 8000` → `http://localhost:8000/home.html` |
-| **အခြေအနေ** | Fictional demo site။ Form တွေက တကယ် မပို့ပါဘူး။ အိုင်ကွန်/အကြောင်းကြားချက်တွေအတွက် internet လိုပါတယ်။ |
+| **Type** | Static front-end demo website — six pages for a fictional coffee shop |
+| **What it does** | Drinks/machines catalogues, events, promotions, image slideshow, newsletter popup, `localStorage` demo cart, forms that only show local confirmations |
+| **Tech** | HTML5, CSS3, vanilla JavaScript (inline) · Font Awesome · SweetAlert2 — no backend or database |
+| **Ports** | No install/build needed — open `home.html` directly. Optionally: `python -m http.server 8000` → `http://localhost:8000/home.html` |
+| **Status** | Fictional demo site. Forms do not really submit. Icons and notifications need an internet connection. |
 
-**In short (English):** A front-end-only demo site for a fictional coffee shop: six linked HTML pages with a slideshow, catalogues, events, promotions and a `localStorage` cart. No backend or database — forms only show local confirmations.
+In short: A front-end-only demo site for a fictional coffee shop: six linked HTML pages with a slideshow, catalogues, events, promotions and a `localStorage` cart. No backend or database — forms only show local confirmations.
 
 ## Overview
 
